@@ -1,6 +1,7 @@
 module.exports = {
     lang: 'en-US',
     title: 'scrumpy/tiptap',
+    base: '/docs/',
     themeConfig: {
         docsRepo: 'scrumpy/tiptap-docs',
         editLinks: true,
