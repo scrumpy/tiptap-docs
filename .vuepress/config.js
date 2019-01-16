@@ -6,7 +6,26 @@ module.exports = {
         editLinks: true,
         editLinkText: 'Edit this page on GitHub',
         search: true,
-        sidebar: {},
+        sidebar: {
+            '/': [
+                {
+                    title: 'Getting Started',
+                    collapsable: false,
+                    children: [
+                        '',
+                        'getting-started/installation',
+                        'getting-started/usage',
+                    ]
+                },
+                {
+                    title: 'Styling',
+                    collapsable: false,
+                    children: [
+                        'styling/basics',
+                    ]
+                },
+            ],
+        },
         nav: [
             { text: 'GitHub', link: 'https://github.com/scrumpy/tiptap' },
             { text: 'Examples', link: 'https://tiptap.scrumpy.io/' },

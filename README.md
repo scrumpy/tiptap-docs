@@ -1,3 +1,3 @@
-# Documentation
+# Introduction
 
 🚧 Work in Progress
