@@ -25,6 +25,23 @@ module.exports = {
                         'styling/basics',
                     ]
                 },
+                {
+                    title: 'Extensions',
+                    collapsable: false,
+                    children: [
+                        'extensions/basics.md',
+                        'extensions/built-in.md'
+                    ]
+                },
+                {
+                    title: 'API',
+                    collapsable: false,
+                    children: [
+                        'api/classes',
+                        'api/components',
+                        'api/plugins'
+                    ]
+                }
             ],
         },
         nav: [

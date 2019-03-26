@@ -1,1 +1,1 @@
-# Basics
+# Basic styling
