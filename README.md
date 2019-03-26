@@ -37,7 +37,8 @@ yarn start
 
 - [Philipp Kühn](https://github.com/philippkuehn)
 - [Christoph Flathmann](https://github.com/Chrissi2812)
-- [All Contributors](https://github.com/scrumpy/tiptap/contributors)
+- [Erick Wilder](https://github.com/erickwilder)
+- [All Contributors](../../contributors)
 
 ## License
 
