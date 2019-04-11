@@ -16,6 +16,21 @@ For a full list of officially supported extensions, check the [built-in extensio
 
 [[toc]]
 
+## Installation
+Install it with your favorite package manager:
+
+```
+npm add tiptap-extensions
+```
+
+or
+
+```
+yarn add tiptap-extensions
+```
+
+> Older versions of NPM requires you to use `npm install` instead.
+
 ## Usage
 
 ### Example
