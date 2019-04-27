@@ -235,7 +235,7 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
   ```js
   new Editor({
     // other options omitted for brevity
-    onUpdate( { state, getHTML, getJSON, transaction } ) => {
+    onUpdate: ( { state, getHTML, getJSON, transaction } ) => {
       console.log(state, transaction)
       console.log(getHTML(), getJSON())
     }
