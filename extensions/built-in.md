@@ -44,10 +44,11 @@ usually tied to a [Command](../commands/basics.md). The official set of commands
             new Blockquote(),
           ],
           content: `
-          <blockquote>
-          Life is like riding a bycicle. To keep your balance, you must keep moving.
-          </blockquote>
-          <p>Albert Einstein</p>`,
+            <blockquote>
+              Life is like riding a bycicle. To keep your balance, you must keep moving.
+            </blockquote>
+            <p>Albert Einstein</p>
+          `,
         }),
       }
     },
@@ -97,13 +98,13 @@ usually tied to a [Command](../commands/basics.md). The official set of commands
             new Bold(),
           ],
           content: `
-          <p><strong>This is strong</strong></p>
-          <p><b>And this</b></p>
-          <p style="font-weight: bold">This as well</p>
-          <p style="font-weight: bolder">Oh! and this</p>
-          <p style="font-weight: 500">Cool! Right!?</p>
-          <p style="font-weight: 999">Up to 999!!!</p>
-          `
+            <p><strong>This is strong</strong></p>
+            <p><b>And this</b></p>
+            <p style="font-weight: bold">This as well</p>
+            <p style="font-weight: bolder">Oh! and this</p>
+            <p style="font-weight: 500">Cool! Right!?</p>
+            <p style="font-weight: 999">Up to 999!!!</p>
+          `,
         }),
       }
     },

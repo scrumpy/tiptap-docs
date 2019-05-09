@@ -7,12 +7,12 @@
 [[toc]]
 
 ## Editor
-This class is a central building block of tiptap. It does most of the heavy lifting of creating a working Prosemirror
-editor such as creating the [`EditorView`][@prosemirror-view], setting the initial 
-[`EditorState`][@prosemirror-state] and so on.
+This class is a central building block of tiptap. It does most of the heavy lifting of creating a working ProseMirror
+editor such as creating the [`EditorView`][@ProseMirror-view], setting the initial 
+[`EditorState`][@ProseMirror-state] and so on.
 
-Although tiptap tries to hide most of the complexity of [Prosemirror][@prosemirror], tiptap is built on top of its APIs
-and we strongly recommend you to read through the [Prosemirror Guide][@prosemirror-guide]. You'll have a better 
+Although tiptap tries to hide most of the complexity of [ProseMirror][@ProseMirror], tiptap is built on top of its APIs
+and we strongly recommend you to read through the [ProseMirror Guide][@ProseMirror-guide]. You'll have a better 
 understanding of how everything works under the hood and get familiar with many terms and jargon used by tiptap.
 
 ### Usage
@@ -65,7 +65,7 @@ export default {
   - `{object} options` an object of [Editor options](#editor-options)
 
 #### setContent(content = {}, emitUpdate = false)
-Replace the current content. You can pass an HTML string or a JSON document that matches the editor's [`schema`][@prosemirror-schema].
+Replace the current content. You can pass an HTML string or a JSON document that matches the editor's [`schema`][@ProseMirror-schema].
 
 - **Arguments:**
   - `{object} content` HTML string or a JSON document
@@ -85,7 +85,7 @@ Overwrites the current editor options.
   - `{object} options` an object of [Editor options](#editor-options)
 
 #### registerPlugin(plugin)
-Register a Prosemirror plugin.
+Register a ProseMirror plugin.
 
 #### getJSON()
 Get the current content as JSON.
@@ -132,7 +132,7 @@ An object passed down to the `Editor` constructor to change it's behaviour.
 ```
 ### Attributes
 #### editorProps
-- **Details:** An object describing [Prosemirror EditorProps][@prosemirror-editor-props].
+- **Details:** An object describing [ProseMirror EditorProps][@ProseMirror-editor-props].
 - **Type:** `EditorProps`
 - **Required:** `false`
 - **Default:** `{}`
@@ -173,7 +173,7 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
 
 #### content
 
-- **Details:** the editor state object used by Prosemirror. You can also pass HTML to the `content` slot of the 
+- **Details:** the editor state object used by ProseMirror. You can also pass HTML to the `content` slot of the 
   [`EditorContent`component](components.md#editor-content). This option has priority and when _both_ slot and option is 
   used, the `content` slot will be ignored.
 - **Type**: `string |  object`
@@ -183,7 +183,7 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
   defined in the schema is ignored.
 
 #### emptyDocument
-- **Details**: contains the initial Prosemirror document specification used to render  an empty document. You may override it with a custom schema.
+- **Details**: contains the initial ProseMirror document specification used to render  an empty document. You may override it with a custom schema.
 - **Type:**: `object`
 - **Required:**: `false`
 - **Default:**
@@ -197,21 +197,21 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
   ```
 
 #### useBuiltInExtensions
-- **Details:** By default tiptap adds a `Doc`, `Paragraph` and `Text` node to the Prosemirror schema. Set this to `false`
+- **Details:** By default tiptap adds a `Doc`, `Paragraph` and `Text` node to the ProseMirror schema. Set this to `false`
   if you want to change the default structure of how your document is generated.
 - **Type:** `boolean`
 - **Required:** `false`
 - **Default:** `true`
 
 #### dropCursor
-- **Details:** Configuration options for [`prosemirror-dropcursor`][@prosemirror-dropcursor].
+- **Details:** Configuration options for [`ProseMirror-dropcursor`][@ProseMirror-dropcursor].
 - **Type:** `object`
 - **Required:** `false`
 - **Default:** `{}`
 
 #### onInit()
-- **Details:** This will be called with an object containing [`state`][@prosemirror-state] and [`view`][@prosemirror-view] 
-  from Prosemirror once the editor is initialized.
+- **Details:** This will be called with an object containing [`state`][@ProseMirror-state] and [`view`][@ProseMirror-view] 
+  from ProseMirror once the editor is initialized.
 - **Type:** `Function`
 - **Required:** `false`
 - **Default:** `() => {}`
@@ -226,8 +226,8 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
   })
   ```
 #### onUpdate(context)
-- **Details:** This will be called with a context object containing the current [`state`][@prosemirror-state] of Prosemirror,
-  a `getJSON()` and `getHTML()` functions, and the [`transaction`][@prosemirror-transaction] on every change made to the editor.
+- **Details:** This will be called with a context object containing the current [`state`][@ProseMirror-state] of ProseMirror,
+  a `getJSON()` and `getHTML()` functions, and the [`transaction`][@ProseMirror-transaction] on every change made to the editor.
 - **Type:** `Function`
 - **Required:** `false`
 - **Default:** `() => {}`
@@ -244,7 +244,7 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
 
 #### onFocus()
 - **Details:** This will be called and object containing the [focus `event`][@mdn-focus-event], the current 
-  [`state`][@prosemirror-state], and [`view`][@prosemirror-view] from Prosemirror whenever the editor _receives_ focus.
+  [`state`][@ProseMirror-state], and [`view`][@ProseMirror-view] from ProseMirror whenever the editor _receives_ focus.
 - **Type:** `Function`
 - **Required:** `false`
 - **Default:** `() => {}`
@@ -260,7 +260,7 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
 
 #### onBlur()
 - **Details:** This will be called and object containing the [blur `event`][@mdn-blur-event], the current 
-  [`state`][@prosemirror-state], and [`view`][@prosemirror-view] from Prosemirror whenever the editor _loses_ focus.
+  [`state`][@ProseMirror-state], and [`view`][@ProseMirror-view] from ProseMirror whenever the editor _loses_ focus.
 - **Type:** `Function`
 - **Required:** `false`
 - **Default:** `() => {}`
@@ -290,7 +290,7 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
   ```
 
 #### onDrop()
-- **Details:** This will be called whenever the users drags and _drop_ some object into the editor view (i.e., an image, or file). This is a wrapper around [`handleDrop` editor prop](@prosemirror-editor-props)
+- **Details:** This will be called whenever the users drags and _drop_ some object into the editor view (i.e., an image, or file). This is a wrapper around [`handleDrop` editor prop](@ProseMirror-editor-props)
 - **Type:** `Function`
 - **Required:** `false`
 - **Default:** `() => {}`
@@ -346,15 +346,15 @@ TBD
 TBD
 
 [@tiptap-contrib]: https://github.com/scrumpy/tiptap/blob/master/CONTRIBUTING.md
-[@doc-schema]: https://prosemirror.net/docs/ref/#model.Document_Schema
+[@doc-schema]: https://ProseMirror.net/docs/ref/#model.Document_Schema
 [@extensions-guide]: ../extensions/basics.md
-[@prosemirror-dropcursor]: https://github.com/ProseMirror/prosemirror-dropcursor
-[@prosemirror-editor-props]: https://prosemirror.net/docs/ref/#view.EditorProps
-[@prosemirror-guide]: https://prosemirror.net/docs/guide/
-[@prosemirror-state]: https://prosemirror.net/docs/ref/#state.Editor_State
-[@prosemirror-transaction]: https://prosemirror.net/docs/ref/#state.Transaction
-[@prosemirror-schema]: https://prosemirror.net/docs/ref/#model.Document_Schema
-[@prosemirror-view]: https://prosemirror.net/docs/ref/#view.EditorView
-[@prosemirror]: https://prosemirror.net/docs/
+[@ProseMirror-dropcursor]: https://github.com/ProseMirror/ProseMirror-dropcursor
+[@ProseMirror-editor-props]: https://ProseMirror.net/docs/ref/#view.EditorProps
+[@ProseMirror-guide]: https://ProseMirror.net/docs/guide/
+[@ProseMirror-state]: https://ProseMirror.net/docs/ref/#state.Editor_State
+[@ProseMirror-transaction]: https://ProseMirror.net/docs/ref/#state.Transaction
+[@ProseMirror-schema]: https://ProseMirror.net/docs/ref/#model.Document_Schema
+[@ProseMirror-view]: https://ProseMirror.net/docs/ref/#view.EditorView
+[@ProseMirror]: https://ProseMirror.net/docs/
 [@mdn-focus-event]: https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event
 [@mdn-blur-event]: https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event

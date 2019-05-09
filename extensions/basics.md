@@ -1,16 +1,10 @@
 > 🚧 This is a work in progress and contributions are welcome. Read the tiptap [contribution guidelines][@tiptap-contrib]
 > and help us shape the documentation.
 
-
 # Extensions
-[`tiptap-extensions`](@tiptap-extensions) is a package containing many ready-made components officially maintained
-by the tiptap project maintainers and community. It's goal is to minimise the effort to implement your own editor
-features while keeping the core design principles of a _renderless_ editor.
+[`tiptap-extensions`](@tiptap-extensions) is a package containing many ready-made components officially maintained by the tiptap project maintainers and community. It's goal is to minimise the effort to implement your own editor features while keeping the core design principles of a *renderless* editor.
 
-The extensions package provides Prosemirror plugins, Nodes, or Marks that can be added to to tiptap. You are free to 
-implement your own extensions as well. By using them, you barely have to think about defining your own Prosemirror 
-Document schema, as it is dynamically composed based on all extensions you have registered with your 
-[`Editor` instance](../api/classes.md#editor)
+The extensions package provides ProseMirror plugins, Nodes, or Marks that can be added to tiptap. You are free to implement your own extensions as well. By using them, you barely have to think about defining your own ProseMirror [Document schema](https://prosemirror.net/docs/guide/#schema), as it is dynamically composed based on all extensions you have registered with your [`Editor` instance](../api/classes.md#editor)
 
 For a full list of officially supported extensions, check the [built-in extensions list](./built-in.md) section in the documentation.
 
@@ -41,8 +35,8 @@ new Editor({
   // other options omitted for brevity
   extensions: [
       // The editor will accept paragraphs and `<blockquote>` elements as part of its document schema.
-      Blockquote
-  ]
+      Blockquote,
+  ],
 })
 ```
 

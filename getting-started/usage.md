@@ -18,15 +18,12 @@ export default {
   },
   data() {
     return {
-      editor: null,
+      // Create an `Editor` instance with some default content. The editor is 
+      // then passed to the `EditorContent` component as a `prop`
+      editor: new Editor({
+        content: '<p>This is just a boring paragraph</p>',
+      }),
     }
-  },
-  mounted() {
-    // Create an `Editor` instance with some default content. The editor is 
-    // then passed to the `EditorContent` component as a `prop`
-    this.editor = new Editor({
-      content: '<p>This is just a boring paragraph</p>',
-    })
   },
   beforeDestroy() {
     // Always destroy your editor instance when it's no longer needed
