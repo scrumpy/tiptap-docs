@@ -6,7 +6,7 @@
 
 [[toc]]
 
-## Editor
+## Editor 
 This class is a central building block of tiptap. It does most of the heavy lifting of creating a working ProseMirror
 editor such as creating the [`EditorView`][@ProseMirror-view], setting the initial 
 [`EditorState`][@ProseMirror-state] and so on.

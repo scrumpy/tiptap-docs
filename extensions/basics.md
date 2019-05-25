@@ -30,12 +30,29 @@ yarn add tiptap-extensions
 ### Example
 
 ```js
-import { Blockquote } from 'tiptap-extensions'
+import { Heading } from 'tiptap-extensions'
+
 new Editor({
   // other options omitted for brevity
   extensions: [
-      // The editor will accept paragraphs and `<blockquote>` elements as part of its document schema.
-      Blockquote,
+    // The editor will accept paragraphs and headline elements as part of its document schema.
+    new Heading(),
+  ],
+})
+```
+
+Some extension accepts options.
+
+```js
+import { Heading } from 'tiptap-extensions'
+
+new Editor({
+  extensions: [
+    // The editor now supports `<h1>`, <h2>` and <h3>`.
+    // But not <h4>`, <h5>` or <h6>`.
+    new Heading({
+      levels: [1, 2, 3],
+    }),
   ],
 })
 ```

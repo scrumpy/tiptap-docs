@@ -11,53 +11,52 @@ usually tied to a [Command](../commands/basics.md). The official set of commands
 - **Description:** allows you to use the `<blockquote>` HTML tag in the editor.
 - **Type:** Node
 - **Default keybindings**: `Ctrl->`
-- **Example:**
-  ```vue
-  <template>
-    <div>
-      <editor-menu-bar :editor="editor">
-        <div slot-scope="{ commands, isActive }">
-            <button :class="{ 'is-active': isActive.blockquote() }" @click="commands.blockquote">
-              Blockquote
-            </button>
-        </div>
-      </editor-menu-bar>
 
-      <editor-content :editor="editor" />
-    </div>
-  </template>
+```vue
+<template>
+  <div>
+    <editor-menu-bar :editor="editor">
+      <div slot-scope="{ commands, isActive }">
+        <button type="button" :class="{ 'is-active': isActive.blockquote() }" @click="commands.blockquote">
+          Blockquote
+        </button>
+      </div>
+    </editor-menu-bar>
 
-  <script>
-  import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
-  import { Blockquote } from 'tiptap-extensions'
+    <editor-content :editor="editor" />
+  </div>
+</template>
 
+<script>
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { Blockquote } from 'tiptap-extensions'
 
-  export default {
-    components: {
-        EditorMenuBar,
-        EditorContent,
-    },
-    data() {
-      return {
-        editor: new Editor({
-          extensions: [
-            new Blockquote(),
-          ],
-          content: `
-            <blockquote>
-              Life is like riding a bycicle. To keep your balance, you must keep moving.
-            </blockquote>
-            <p>Albert Einstein</p>
-          `,
-        }),
-      }
-    },
-    beforeDestroy() {
-      this.editor.destroy()
+export default {
+  components: {
+    EditorMenuBar,
+    EditorContent,
+  },
+  data() {
+    return {
+      editor: new Editor({
+        extensions: [
+          new Blockquote(),
+        ],
+        content: `
+          <blockquote>
+            Life is like riding a bycicle. To keep your balance, you must keep moving.
+          </blockquote>
+          <p>Albert Einstein</p>
+        `,
+      }),
     }
+  },
+  beforeDestroy() {
+    this.editor.destroy()
   }
-  </script>
-  ```
+}
+</script>
+```
 
 ## Bold
 - **Description** renders text in **bold** text weight. If you pass `<strong>`, or `<b>` tags, or text with inline `style` 
@@ -65,115 +64,86 @@ usually tied to a [Command](../commands/basics.md). The official set of commands
 - **Restrictions:** the extension will generate the corresponding `<strong>` HTML tags when reading contents of the 
   `Editor` instance. All text marked as bold, regardless of method will be normalized to `<strong>` HTML tags.
 - **Default Keybindings:** `Ctrl-b` on Windows/Linux, or `Cmd-b` on macOS
-- **Example:**
-  ```vue
-  <template>
-    <div>
-      <editor-menu-bar :editor="editor">
-        <div slot-scope="{ commands, isActive }">
-            <button :class="{ 'is-active': isActive.bold() }" @click="commands.bold">
-              Bold
-            </button>
-        </div>
-      </editor-menu-bar>
 
-      <editor-content :editor="editor" />
-    </div>
-  </template>
+```vue
+<template>
+  <div>
+    <editor-menu-bar :editor="editor">
+      <div slot-scope="{ commands, isActive }">
+        <button type="button" :class="{ 'is-active': isActive.bold() }" @click="commands.bold">
+          Bold
+        </button>
+      </div>
+    </editor-menu-bar>
 
-  <script>
-  import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
-  import { Bold } from 'tiptap-extensions'
+    <editor-content :editor="editor" />
+  </div>
+</template>
+
+<script>
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { Bold } from 'tiptap-extensions'
 
 
-  export default {
-    components: {
-        EditorMenuBar,
-        EditorContent,
-    },
-    data() {
-      return {
-        editor: new Editor({
-          extensions: [
-            new Bold(),
-          ],
-          content: `
-            <p><strong>This is strong</strong></p>
-            <p><b>And this</b></p>
-            <p style="font-weight: bold">This as well</p>
-            <p style="font-weight: bolder">Oh! and this</p>
-            <p style="font-weight: 500">Cool! Right!?</p>
-            <p style="font-weight: 999">Up to 999!!!</p>
-          `,
-        }),
-      }
-    },
-    beforeDestroy() {
-      this.editor.destroy()
+export default {
+  components: {
+    EditorMenuBar,
+    EditorContent,
+  },
+  data() {
+    return {
+      editor: new Editor({
+        extensions: [
+          new Bold(),
+        ],
+        content: `
+          <p><strong>This is strong</strong></p>
+          <p><b>And this</b></p>
+          <p style="font-weight: bold">This as well</p>
+          <p style="font-weight: bolder">Oh! and this</p>
+          <p style="font-weight: 500">Cool! Right!?</p>
+          <p style="font-weight: 999">Up to 999!!!</p>
+        `,
+      }),
     }
+  },
+  beforeDestroy() {
+    this.editor.destroy()
   }
-  </script>
-  ```
+}
+</script>
+```
 
 ## BulletList
 - **Description** allows you to use the `<ul>` and `<li>` HTML tags in the editor
-- **Example:**
-  ```vue
-  ```
+
 
 ## Code
 - **Description** allows you to use the `<Code>` HTML tag in the editor
-- **Example:**
-  ```vue
-  ```
 
 ## CodeBlock
 - **Description** allows you to use the `<CodeBlock>` HTML tag in the editor
-- **Example:**
-  ```vue
-  ```
 
 ## HardBreak
 - **Description** allows you to use the `<HardBreak>` HTML tag in the editor
-- **Example:**
-  ```vue
-  ```
 
 ## Heading
 - **Description** allows you to use the `<Heading>` HTML tag in the editor
-- **Example:**
-  ```vue
-  ```
 
 ## History
 - **Description** allows you to use the `<History>` HTML tag in the editor
-- **Example:**
-  ```vue
-  ```
 
 ## Italic
 - **Description** allows you to use the `<Italic>` HTML tag in the editor
-- **Example:**
-  ```vue
-  ```
 
 ## Link
 - **Description** allows you to use the `<Link>` HTML tag in the editor
-- **Example:**
-  ```vue
-  ```
   
 ## ListItem
 - **Description** allows you to use the `<ListItem>` HTML tag in the editor
-- **Example:**
-  ```vue
-  ```
 
 ## OrderedList
 - **Description** allows you to use the `<OrderedList>` HTML tag in the editor
-- **Example:**
-  ```vue
-  ```
 
 ## TodoItem
 - **Description** It renders a single toggleable item of a list.
@@ -182,22 +152,12 @@ usually tied to a [Command](../commands/basics.md). The official set of commands
 
 ## TodoList
 - **Description** renders a toggleable list of items. It should be used with the `TodoItem` extension.
-- **Example:**
-  ```vue
-  ```
 
 ## Strike
 - **Description** allows you to use the `<Strike>` HTML tag in the editor
-- **Example:**
-  ```vue
-  ```
 
 ## Underline
 - **Description** allows you to use the `<Underline>` HTML tag in the editor
-- **Example:**
-  ```vue
-  ```
-
 
 ```vue
 <template>

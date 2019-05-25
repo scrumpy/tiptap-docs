@@ -10,4 +10,8 @@ By default tiptap will add `white-space: pre-wrap;` to the DOM, which is **requi
 .ProseMirror [contenteditable="false"] {
   white-space: normal;
 }
+
+.ProseMirror [contenteditable="true"] {
+  white-space: pre-wrap;
+}
 ```
