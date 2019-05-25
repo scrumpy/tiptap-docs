@@ -8,10 +8,15 @@ usually tied to a [Command](../commands/basics.md). The official set of commands
 [`tiptap-commands`][@npmjs-tiptap-commands] package.
 
 ## Blockquote
-- **Description:** allows you to use the `<blockquote>` HTML tag in the editor.
-- **Type:** Node
-- **Default keybindings**: `Ctrl->`
+Allows you to use the `<blockquote>` HTML tag in the editor.
 
+#### Options
+*None*
+
+#### Default Keybindings
+- `Ctrl->`
+
+#### Example
 ```vue
 <template>
   <div>
@@ -59,11 +64,20 @@ export default {
 ```
 
 ## Bold
-- **Description** renders text in **bold** text weight. If you pass `<strong>`, or `<b>` tags, or text with inline `style` 
-  attributes setting the `font-weight` CSS rule in the editor's initial content, they will be rendered accordingly.
-- **Restrictions:** the extension will generate the corresponding `<strong>` HTML tags when reading contents of the 
-  `Editor` instance. All text marked as bold, regardless of method will be normalized to `<strong>` HTML tags.
-- **Default Keybindings:** `Ctrl-b` on Windows/Linux, or `Cmd-b` on macOS
+Renders text in **bold** text weight. If you pass `<strong>`, or `<b>` tags, or text with inline `style` attributes setting the `font-weight` CSS rule in the editor's initial content, they will be rendered accordingly.
+
+::: warning Restrictions
+The extension will generate the corresponding `<strong>` HTML tags when reading contents of the `Editor` instance. All text marked as bold, regardless of method will be normalized to `<strong>` HTML tags.
+:::
+
+#### Options
+*None*
+
+#### Default Keybindings
+- `Ctrl-b` on Windows/Linux
+- `Cmd-b` on macOS
+
+#### Example
 
 ```vue
 <template>
@@ -83,7 +97,6 @@ export default {
 <script>
 import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
 import { Bold } from 'tiptap-extensions'
-
 
 export default {
   components: {
@@ -115,50 +128,62 @@ export default {
 ```
 
 ## BulletList
-- **Description** allows you to use the `<ul>` and `<li>` HTML tags in the editor
+Allows you to use the `<ul>` and `<li>` HTML tags in the editor
 
+::: warning Restrictions
+This extensions is intended to be used with the `ListItem` extension. 
+:::
 
 ## Code
-- **Description** allows you to use the `<Code>` HTML tag in the editor
+Allows you to use the `<Code>` HTML tag in the editor
 
 ## CodeBlock
-- **Description** allows you to use the `<CodeBlock>` HTML tag in the editor
+Allows you to use the `<CodeBlock>` HTML tag in the editor
 
 ## HardBreak
-- **Description** allows you to use the `<HardBreak>` HTML tag in the editor
+Allows you to use the `<HardBreak>` HTML tag in the editor
 
 ## Heading
-- **Description** allows you to use the `<Heading>` HTML tag in the editor
+Allows you to use the `<Heading>` HTML tag in the editor
 
 ## History
-- **Description** allows you to use the `<History>` HTML tag in the editor
+Allows you to use the `<History>` HTML tag in the editor
 
 ## Italic
-- **Description** allows you to use the `<Italic>` HTML tag in the editor
+Allows you to use the `<Italic>` HTML tag in the editor
 
 ## Link
-- **Description** allows you to use the `<Link>` HTML tag in the editor
+Allows you to use the `<Link>` HTML tag in the editor
   
 ## ListItem
-- **Description** allows you to use the `<ListItem>` HTML tag in the editor
+Allows you to use the `<ListItem>` HTML tag in the editor
+
+::: warning Restrictions
+This extensions is intended to be used with the `BulletList` or `OrderedList` extension. 
+:::
 
 ## OrderedList
-- **Description** allows you to use the `<OrderedList>` HTML tag in the editor
+Allows you to use the `<OrderedList>` HTML tag in the editor
+
+::: warning Restrictions
+This extensions is intended to be used with the `ListItem` extension. 
+:::
 
 ## Table
 This enables support for tables in your editor.
 Tables can be nested and allow all blocks to be used inside.
 Each `<TableCell>` includes a single `<Paragraph>`.
 
-### Options <Badge text="1.19.3"/>
+#### Options <Badge text="1.19.3"/>
 | option | type | default | description |
 | ------ | ---- | ---- | ----- |
 | resizable | boolean | false | Enables the resizing of columns |
-### Default Keybindings
+
+#### Default Keybindings
 - `Tab` Next Cell
 - `Shift-Tab` Previous Cell 
 
-### Commands
+#### Commands
 | command | options | description |
 | ------ | ---- | ---------------- |
 | createTable | ```{ rowsCount, colsCount, withHeaderRow }``` | Returns a table node of a given size. `withHeaderRow` defines whether the first row of the table will be a header row. |
@@ -228,114 +253,45 @@ You have to include all table extensions (`TableHeader`, `TableCell` & `TableRow
   ```
 
 ## TableHeader
+Allows you to use the `<th>` HTML tag in the editor.
+
 ::: warning Restrictions
 This extensions is intended to be used with the `Table` extension.
 :::
-- **Description:** allows you to use the `<th>` HTML tag in the editor
-- **Type:** Node
 
 ## TableCell
+Allows you to use the `<td>` HTML tag in the editor.
+
 ::: warning Restrictions
 This extensions is intended to be used with the `Table` extension.
 :::
-- **Description:** allows you to use the `<td>` HTML tag in the editor
-- **Type:** Node
 
 ## TableRow
+Allows you to use the `<tr>` HTML tag in the editor.
+
 ::: warning Restrictions
 This extensions is intended to be used with the `Table` extension.
 :::
-- **Description:** allows you to use the `<tr>` HTML tag in the editor
-- **Type:** Node
 
 ## TodoItem
-- **Description** It renders a single toggleable item of a list.
-- **Type:** Node
-- **Restrictions:** This extensions is intended to be used with the `TodoList` extension. 
+It renders a single toggleable item of a list.
+
+::: warning Restrictions
+This extensions is intended to be used with the `TodoList` extension. 
+:::
 
 ## TodoList
-- **Description** renders a toggleable list of items. It should be used with the `TodoItem` extension.
+Renders a toggleable list of items. It should be used with the `TodoItem` extension.
+
+::: warning Restrictions
+This extensions is intended to be used with the `TodoItem` extension. 
+:::
 
 ## Strike
-- **Description** allows you to use the `<Strike>` HTML tag in the editor
+Allows you to use the `<Strike>` HTML tag in the editor
 
 ## Underline
-- **Description** allows you to use the `<Underline>` HTML tag in the editor
-
-```vue
-<template>
-  <div>
-    <editor-menu-bar :editor="editor">
-      <div slot-scope="{ commands, isActive }">
-        <button :class="{ 'is-active': isActive.bold() }" @click="commands.bold">
-          Bold
-        </button>
-      </div>
-    </editor-menu-bar>
-    <editor-content :editor="editor" />
-  </div>
-</template>
-
-<script>
-import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
-import {
-  Blockquote,
-  CodeBlock,
-  HardBreak,
-  Heading,
-  OrderedList,
-  BulletList,
-  ListItem,
-  TodoItem,
-  TodoList,
-  Bold,
-  Code,
-  Italic,
-  Link,
-  Strike,
-  Underline,
-  History,
-} from 'tiptap-extensions'
-
-export default {
-  components: {
-    EditorMenuBar,
-    EditorContent,
-  },
-  data() {
-    return {
-      editor: new Editor({
-        extensions: [
-          new Blockquote(),
-          new CodeBlock(),
-          new HardBreak(),
-          new Heading({ levels: [1, 2, 3] }),
-          new BulletList(),
-          new OrderedList(),
-          new ListItem(),
-          new TodoItem(),
-          new TodoList(),
-          new Bold(),
-          new Code(),
-          new Italic(),
-          new Link(),
-          new Strike(),
-          new Underline(),
-          new History(),
-        ],
-        content: `
-          <h1>Yay Headlines!</h1>
-          <p>All these <strong>cool tags</strong> are working now.</p>
-        `,
-      }),
-    }
-  },
-  beforeDestroy() {
-    this.editor.destroy()
-  },
-}
-</script>
-```
+Allows you to use the `<Underline>` HTML tag in the editor
 
 [@tiptap-contrib]: https://github.com/scrumpy/tiptap/blob/master/CONTRIBUTING.md
 [@npmjs-tiptap-commands]: https://npmjs.org/package/tiptap-commands
