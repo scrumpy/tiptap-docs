@@ -20,12 +20,10 @@ Allows you to use the `<blockquote>` HTML tag in the editor.
 ```vue
 <template>
   <div>
-    <editor-menu-bar :editor="editor">
-      <div slot-scope="{ commands, isActive }">
-        <button type="button" :class="{ 'is-active': isActive.blockquote() }" @click="commands.blockquote">
-          Blockquote
-        </button>
-      </div>
+    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+      <button type="button" :class="{ 'is-active': isActive.blockquote() }" @click="commands.blockquote">
+        Blockquote
+      </button>
     </editor-menu-bar>
 
     <editor-content :editor="editor" />
@@ -82,12 +80,10 @@ The extension will generate the corresponding `<strong>` HTML tags when reading 
 ```vue
 <template>
   <div>
-    <editor-menu-bar :editor="editor">
-      <div slot-scope="{ commands, isActive }">
-        <button type="button" :class="{ 'is-active': isActive.bold() }" @click="commands.bold">
-          Bold
-        </button>
-      </div>
+    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+      <button type="button" :class="{ 'is-active': isActive.bold() }" @click="commands.bold">
+        Bold
+      </button>
     </editor-menu-bar>
 
     <editor-content :editor="editor" />
@@ -128,42 +124,213 @@ export default {
 ```
 
 ## BulletList
-Allows you to use the `<ul>` and `<li>` HTML tags in the editor
+Allows you to use the `<ul>` HTML tag in the editor.
 
 ::: warning Restrictions
 This extensions is intended to be used with the `ListItem` extension. 
 :::
 
 ## Code
-Allows you to use the `<Code>` HTML tag in the editor
+Allows you to use the `<code>` HTML tag in the editor.
+
+#### Options
+*None*
+
+#### Default Keybindings
+- `Mod-``
+
+#### Example
+```vue
+<template>
+  <div>
+    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+      <button type="button" :class="{ 'is-active': isActive.code() }" @click="commands.code">
+        Code
+      </button>
+    </editor-menu-bar>
+
+    <editor-content :editor="editor" />
+  </div>
+</template>
+
+<script>
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { Code } from 'tiptap-extensions'
+
+export default {
+  components: {
+    EditorMenuBar,
+    EditorContent,
+  },
+  data() {
+    return {
+      editor: new Editor({
+        extensions: [
+          new Code(),
+        ],
+        content: `
+          <p>This is some <code>inline code.</code></p>
+        `,
+      }),
+    }
+  },
+  beforeDestroy() {
+    this.editor.destroy()
+  }
+}
+</script>
+```
 
 ## CodeBlock
-Allows you to use the `<CodeBlock>` HTML tag in the editor
+Allows you to use the `<pre>` HTML tag in the editor.
 
 ## HardBreak
-Allows you to use the `<HardBreak>` HTML tag in the editor
+Allows you to use the `<hr>` HTML tag in the editor.
 
 ## Heading
-Allows you to use the `<Heading>` HTML tag in the editor
+Allows you to use the headline HTML tags in the editor.
+
+#### Options
+| option | type | default | description |
+| ------ | ---- | ---- | ----- |
+| levels | Array | [1, 2, 3, 4, 5, 6] | Specifies which headlines are to be supported. |
+
+#### Commands
+| command | options | description |
+| ------ | ---- | ---------------- |
+| heading | level | Creates a heading node. |
+
+#### Default Keybindings
+- `Shift-Ctrl-1`: H1
+- `Shift-Ctrl-2`: H2
+- `Shift-Ctrl-3`: H3
+- `Shift-Ctrl-4`: H4
+- `Shift-Ctrl-5`: H5
+- `Shift-Ctrl-6`: H6
+
+#### Example
+```vue
+<template>
+  <div>
+    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+      <div>
+        <button type="button" :class="{ 'is-active': isActive.heading({ level: 1 }) }" @click="commands.heading({ level: 1})">
+          H1
+        </button>
+        <button type="button" :class="{ 'is-active': isActive.heading({ level: 2 }) }" @click="commands.heading({ level: 2 })">
+          H2
+        </button>
+      </div>
+    </editor-menu-bar>
+
+    <editor-content :editor="editor" />
+  </div>
+</template>
+
+<script>
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { Heading } from 'tiptap-extensions'
+
+export default {
+  components: {
+    EditorMenuBar,
+    EditorContent,
+  },
+  data() {
+    return {
+      editor: new Editor({
+        extensions: [
+          new Heading({
+            levels: [1, 2],
+          }),
+        ],
+        content: `
+          <h1>This is a headline level 1</h1>
+          <h2>This is a headline level 2</h2>
+          <h3>This headline will be converted to a paragraph, because it's not defined in the levels option.</h3>
+        `,
+      }),
+    }
+  },
+  beforeDestroy() {
+    this.editor.destroy()
+  }
+}
+</script>
+```
 
 ## History
-Allows you to use the `<History>` HTML tag in the editor
+Enables history support.
+
+#### Commands
+| command | options | description |
+| ------ | ---- | ---------------- |
+| undo | none | Undo the latest change. |
+| redo | none | Redo the latest change. |
+
+#### Default Keybindings
+- `Mod-z`: Undo
+- `Shift-Mod-z`: Redo
+
+#### Example
+```vue
+<template>
+  <div>
+    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+      <div>
+        <button type="button" @click="commands.undo">
+          Undo
+        </button>
+        <button type="button" @click="commands.redo">
+          Redo
+        </button>
+      </div>
+    </editor-menu-bar>
+
+    <editor-content :editor="editor" />
+  </div>
+</template>
+
+<script>
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { History } from 'tiptap-extensions'
+
+export default {
+  components: {
+    EditorMenuBar,
+    EditorContent,
+  },
+  data() {
+    return {
+      editor: new Editor({
+        extensions: [
+          new History(),
+        ],
+      }),
+    }
+  },
+  beforeDestroy() {
+    this.editor.destroy()
+  }
+}
+</script>
+```
 
 ## Italic
-Allows you to use the `<Italic>` HTML tag in the editor
+Allows you to use the `<em>` HTML tag in the editor.
 
 ## Link
-Allows you to use the `<Link>` HTML tag in the editor
+Allows you to use the `<a>` HTML tag in the editor.
   
 ## ListItem
-Allows you to use the `<ListItem>` HTML tag in the editor
+Allows you to use the `<li>` HTML tag in the editor.
 
 ::: warning Restrictions
 This extensions is intended to be used with the `BulletList` or `OrderedList` extension. 
 :::
 
 ## OrderedList
-Allows you to use the `<OrderedList>` HTML tag in the editor
+Allows you to use the `<ol>` HTML tag in the editor.
 
 ::: warning Restrictions
 This extensions is intended to be used with the `ListItem` extension. 
@@ -177,7 +344,7 @@ Each `<TableCell>` includes a single `<Paragraph>`.
 #### Options <Badge text="1.19.3"/>
 | option | type | default | description |
 | ------ | ---- | ---- | ----- |
-| resizable | boolean | false | Enables the resizing of columns |
+| resizable | Boolean | false | Enables the resizing of columns |
 
 #### Default Keybindings
 - `Tab` Next Cell
@@ -207,50 +374,48 @@ Each `<TableCell>` includes a single `<Paragraph>`.
 You have to include all table extensions (`TableHeader`, `TableCell` & `TableRow`)
 :::
 
-  ```vue
+```vue
   <template>
-      <div>
-        <editor-menu-bar :editor="editor">
-          <div slot-scope="{ commands, isActive }">
-              <button :class="{ 'is-active': isActive.bold() }" @click="commands.createTable({rowsCount: 3, colsCount: 3, withHeaderRow: false })">
-                Create Table
-              </button>
-          </div>
-        </editor-menu-bar>
+    <div>
+      <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+        <button :class="{ 'is-active': isActive.bold() }" @click="commands.createTable({rowsCount: 3, colsCount: 3, withHeaderRow: false })">
+          Create Table
+        </button>
+      </editor-menu-bar>
+
+      <editor-content :editor="editor" />
+    </div>
+  </template>
   
-        <editor-content :editor="editor" />
-      </div>
-    </template>
-  
-    <script>
-    import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
-    import { Table, TableCell, TableHeader, TableRow } from 'tiptap-extensions'
-  
-  
-    export default {
-      components: {
-          EditorMenuBar,
-          EditorContent,
-      },
-      data() {
-        return {
-          editor: new Editor({
-            extensions: [
-              new Table(),
-              new TableCell(),
-              new TableHeader(),
-              new TableRow(),
-            ],
-            content: ''
-          }),
-        }
-      },
-      beforeDestroy() {
-        this.editor.destroy()
+  <script>
+  import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+  import { Table, TableCell, TableHeader, TableRow } from 'tiptap-extensions'
+
+
+  export default {
+    components: {
+        EditorMenuBar,
+        EditorContent,
+    },
+    data() {
+      return {
+        editor: new Editor({
+          extensions: [
+            new Table(),
+            new TableCell(),
+            new TableHeader(),
+            new TableRow(),
+          ],
+          content: ''
+        }),
       }
+    },
+    beforeDestroy() {
+      this.editor.destroy()
     }
-    </script>
-  ```
+  }
+  </script>
+```
 
 ## TableHeader
 Allows you to use the `<th>` HTML tag in the editor.
@@ -288,10 +453,10 @@ This extensions is intended to be used with the `TodoItem` extension.
 :::
 
 ## Strike
-Allows you to use the `<Strike>` HTML tag in the editor
+Allows you to use the `<s>` HTML tag in the editor.
 
 ## Underline
-Allows you to use the `<Underline>` HTML tag in the editor
+Allows you to use the `<u>` HTML tag in the editor.
 
 [@tiptap-contrib]: https://github.com/scrumpy/tiptap/blob/master/CONTRIBUTING.md
 [@npmjs-tiptap-commands]: https://npmjs.org/package/tiptap-commands
