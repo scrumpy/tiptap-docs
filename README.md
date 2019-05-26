@@ -15,7 +15,7 @@ on top of it. [ProseMirror][@ProseMirror] is a toolkit for building rich-text ed
 
 ### What does *renderless* mean?
 
-With renderless components you'll have full control over markup and styling. tiptap doesn't tell you what a menu should look like or where it should be rendered in the DOM. That's all up to you. There is also a [good article](@renderless) about renderless components by Adam Wathan.
+With renderless components you'll have full control over markup and styling. tiptap doesn't tell you what a menu should look like or where it should be rendered in the DOM. That's all up to you. There is also a [good article][@renderless] about renderless components by Adam Wathan.
 
 ::: tip No styling by default
 tiptap comes without any CSS. It's a feature – not a bug.
