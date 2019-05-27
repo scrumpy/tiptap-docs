@@ -18,8 +18,8 @@ Allows you to use the `<blockquote>` HTML tag in the editor.
 | ------ | ---- | ---------------- |
 | blockquote | none | Wrap content in a blockquote. |
 
-#### Default Keybindings
-- `Ctrl->`
+#### Keybindings
+`Ctrl->`
 
 #### Example
 ```vue
@@ -81,9 +81,9 @@ The extension will generate the corresponding `<strong>` HTML tags when reading 
 | ------ | ---- | ---------------- |
 | bold | none | Mark text as bold. |
 
-#### Default Keybindings
-- `Ctrl-b` on Windows/Linux
-- `Cmd-b` on macOS
+#### Keybindings
+`Ctrl-b` (on Windows/Linux)  
+`Cmd-b` (on macOS)  
 
 #### Example
 
@@ -148,8 +148,8 @@ This extensions is intended to be used with the `ListItem` extension.
 | ------ | ---- | ---------------- |
 | bullet_list | none | Toggle a bullet list. |
 
-#### Default Keybindings
-- `Shift-Ctrl-8` Wrap in a bullet list
+#### Keybindings
+`Shift-Ctrl-8`
 
 #### Example
 
@@ -208,8 +208,8 @@ Allows you to use the `<code>` HTML tag in the editor.
 | ------ | ---- | ---------------- |
 | code | none | Mark text as code. |
 
-#### Default Keybindings
-- `Mod-``
+#### Keybindings
+`Mod-``
 
 #### Example
 ```vue
@@ -257,7 +257,13 @@ export default {
 Allows you to use the `<pre>` HTML tag in the editor.
 
 ## HardBreak
-Allows you to use the `<hr>` HTML tag in the editor.
+Allows you to use the `<br>` HTML tag in the editor.
+
+#### Options
+*None*
+
+#### Keybindings
+`Mod-Enter`, `Shift-Enter`
 
 ## Heading
 Allows you to use the headline HTML tags in the editor.
@@ -272,13 +278,13 @@ Allows you to use the headline HTML tags in the editor.
 | ------ | ---- | ---------------- |
 | heading | level | Creates a heading node. |
 
-#### Default Keybindings
-- `Shift-Ctrl-1`: H1
-- `Shift-Ctrl-2`: H2
-- `Shift-Ctrl-3`: H3
-- `Shift-Ctrl-4`: H4
-- `Shift-Ctrl-5`: H5
-- `Shift-Ctrl-6`: H6
+#### Keybindings
+`Shift-Ctrl-1` → H1  
+`Shift-Ctrl-2` → H2  
+`Shift-Ctrl-3` → H3  
+`Shift-Ctrl-4` → H4  
+`Shift-Ctrl-5` → H5  
+`Shift-Ctrl-6` → H6  
 
 #### Example
 ```vue
@@ -340,9 +346,9 @@ Enables history support.
 | undo | none | Undo the latest change. |
 | redo | none | Redo the latest change. |
 
-#### Default Keybindings
-- `Mod-z`: Undo
-- `Shift-Mod-z`: Redo
+#### Keybindings
+`Mod-z` → Undo  
+`Shift-Mod-z` → Redo  
 
 #### Example
 ```vue
@@ -388,7 +394,7 @@ export default {
 </script>
 ```
 
-## Horizontal Rule
+## HorizontalRule
 Allows you to use the `<hr>` HTML tag in the editor.
 
 #### Options
@@ -399,7 +405,7 @@ Allows you to use the `<hr>` HTML tag in the editor.
 | ------ | ---- | ---------------- |
 | horizontal_rule | none | Create a horizontal rule. |
 
-#### Default Keybindings
+#### Keybindings
 *None*
 
 #### Example
@@ -457,9 +463,9 @@ Allows you to use the `<em>` HTML tag in the editor.
 | ------ | ---- | ---------------- |
 | italic | none | Mark text as italic. |
 
-#### Default Keybindings
-- `Ctrl-i` on Windows/Linux
-- `Cmd-i` on macOS
+#### Keybindings
+`Ctrl-i` (on Windows/Linux)  
+`Cmd-i` (on macOS)  
 
 #### Example
 ```vue
@@ -530,8 +536,8 @@ This extensions is intended to be used with the `ListItem` extension.
 | ------ | ---- | ---------------- |
 | ordered_list | none | Toggle an ordered list. |
 
-#### Default Keybindings
-- `Shift-Ctrl-9` Wrap in an ordered list
+#### Keybindings
+`Shift-Ctrl-9`
 
 #### Example
 
@@ -592,9 +598,9 @@ Each `<TableCell>` includes a single `<Paragraph>`.
 | ------ | ---- | ---- | ----- |
 | resizable | Boolean | false | Enables the resizing of columns |
 
-#### Default Keybindings
-- `Tab` Next Cell
-- `Shift-Tab` Previous Cell 
+#### Keybindings
+`Tab` → Next Cell  
+`Shift-Tab` → Previous Cell  
 
 #### Commands
 | command | options | description |
@@ -709,9 +715,9 @@ Allows you to use the `<s>` HTML tag in the editor.
 | ------ | ---- | ---------------- |
 | strike | none | Mark text as strikethrough. |
 
-#### Default Keybindings
-- `Ctrl-d` on Windows/Linux
-- `Cmd-d` on macOS
+#### Keybindings
+`Ctrl-d` (on Windows/Linux)  
+`Cmd-d` (on macOS)  
 
 #### Example
 
@@ -770,9 +776,9 @@ Allows you to use the `<u>` HTML tag in the editor.
 | ------ | ---- | ---------------- |
 | underline | none | Mark text as underlined. |
 
-#### Default Keybindings
-- `Ctrl-u` on Windows/Linux
-- `Cmd-u` on macOS
+#### Keybindings
+`Ctrl-u` (on Windows/Linux)  
+`Cmd-u` (on macOS)  
 
 #### Example
 
