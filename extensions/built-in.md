@@ -13,6 +13,11 @@ Allows you to use the `<blockquote>` HTML tag in the editor.
 #### Options
 *None*
 
+#### Commands
+| command | options | description |
+| ------ | ---- | ---------------- |
+| blockquote | none | Wrap content in a blockquote. |
+
 #### Default Keybindings
 - `Ctrl->`
 
@@ -70,6 +75,11 @@ The extension will generate the corresponding `<strong>` HTML tags when reading 
 
 #### Options
 *None*
+
+#### Commands
+| command | options | description |
+| ------ | ---- | ---------------- |
+| bold | none | Mark text as bold. |
 
 #### Default Keybindings
 - `Ctrl-b` on Windows/Linux
@@ -135,6 +145,11 @@ Allows you to use the `<code>` HTML tag in the editor.
 
 #### Options
 *None*
+
+#### Commands
+| command | options | description |
+| ------ | ---- | ---------------- |
+| code | none | Mark text as code. |
 
 #### Default Keybindings
 - `Mod-``
@@ -319,6 +334,63 @@ export default {
 ## Italic
 Allows you to use the `<em>` HTML tag in the editor.
 
+#### Options
+*None*
+
+#### Commands
+| command | options | description |
+| ------ | ---- | ---------------- |
+| italic | none | Mark text as italic. |
+
+#### Default Keybindings
+- `Ctrl-i` on Windows/Linux
+- `Cmd-i` on macOS
+
+#### Example
+
+```vue
+<template>
+  <div>
+    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+      <button type="button" :class="{ 'is-active': isActive.italic() }" @click="commands.italic">
+        Italic
+      </button>
+    </editor-menu-bar>
+
+    <editor-content :editor="editor" />
+  </div>
+</template>
+
+<script>
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { Italic } from 'tiptap-extensions'
+
+export default {
+  components: {
+    EditorMenuBar,
+    EditorContent,
+  },
+  data() {
+    return {
+      editor: new Editor({
+        extensions: [
+          new Italic(),
+        ],
+        content: `
+          <p><em>This is italic</em></p>
+          <p><i>And this</i></p>
+          <p style="font-style: italic">This as well</p>
+        `,
+      }),
+    }
+  },
+  beforeDestroy() {
+    this.editor.destroy()
+  }
+}
+</script>
+```
+
 ## Link
 Allows you to use the `<a>` HTML tag in the editor.
   
@@ -455,8 +527,122 @@ This extensions is intended to be used with the `TodoItem` extension.
 ## Strike
 Allows you to use the `<s>` HTML tag in the editor.
 
+#### Options
+*None*
+
+#### Commands
+| command | options | description |
+| ------ | ---- | ---------------- |
+| strike | none | Mark text as strikethrough. |
+
+#### Default Keybindings
+- `Ctrl-d` on Windows/Linux
+- `Cmd-d` on macOS
+
+#### Example
+
+```vue
+<template>
+  <div>
+    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+      <button type="button" :class="{ 'is-active': isActive.strike() }" @click="commands.strike">
+        Strike
+      </button>
+    </editor-menu-bar>
+
+    <editor-content :editor="editor" />
+  </div>
+</template>
+
+<script>
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { Strike } from 'tiptap-extensions'
+
+export default {
+  components: {
+    EditorMenuBar,
+    EditorContent,
+  },
+  data() {
+    return {
+      editor: new Editor({
+        extensions: [
+          new Strike(),
+        ],
+        content: `
+          <p><s>That's strikethrough.</s></p>
+          <p><del>This too.</del></p>
+          <p><strike>And this.</strike></p>
+          <p style="text-decoration: line-through">This as well.</p>
+        `,
+      }),
+    }
+  },
+  beforeDestroy() {
+    this.editor.destroy()
+  }
+}
+</script>
+```
+
 ## Underline
 Allows you to use the `<u>` HTML tag in the editor.
+
+#### Options
+*None*
+
+#### Commands
+| command | options | description |
+| ------ | ---- | ---------------- |
+| underline | none | Mark text as underlined. |
+
+#### Default Keybindings
+- `Ctrl-u` on Windows/Linux
+- `Cmd-u` on macOS
+
+#### Example
+
+```vue
+<template>
+  <div>
+    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+      <button type="button" :class="{ 'is-active': isActive.underline() }" @click="commands.underline">
+        Underline
+      </button>
+    </editor-menu-bar>
+
+    <editor-content :editor="editor" />
+  </div>
+</template>
+
+<script>
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { Underline } from 'tiptap-extensions'
+
+export default {
+  components: {
+    EditorMenuBar,
+    EditorContent,
+  },
+  data() {
+    return {
+      editor: new Editor({
+        extensions: [
+          new Underline(),
+        ],
+        content: `
+          <p><u>This is underlined.</u></p>
+          <p style="text-decoration: underline">This as well.</p>
+        `,
+      }),
+    }
+  },
+  beforeDestroy() {
+    this.editor.destroy()
+  }
+}
+</script>
+```
 
 [@tiptap-contrib]: https://github.com/scrumpy/tiptap/blob/master/CONTRIBUTING.md
 [@npmjs-tiptap-commands]: https://npmjs.org/package/tiptap-commands
