@@ -140,6 +140,63 @@ Allows you to use the `<ul>` HTML tag in the editor.
 This extensions is intended to be used with the `ListItem` extension. 
 :::
 
+#### Options
+*None*
+
+#### Commands
+| command | options | description |
+| ------ | ---- | ---------------- |
+| bullet_list | none | Toggle a bullet list. |
+
+#### Default Keybindings
+- `Shift-Ctrl-8` Wrap in a bullet list
+
+#### Example
+
+```vue
+<template>
+  <div>
+    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+      <button type="button" :class="{ 'is-active': isActive.bullet_list() }" @click="commands.bullet_list">
+        Bullet List
+      </button>
+    </editor-menu-bar>
+
+    <editor-content :editor="editor" />
+  </div>
+</template>
+
+<script>
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { BulletList } from 'tiptap-extensions'
+
+export default {
+  components: {
+    EditorMenuBar,
+    EditorContent,
+  },
+  data() {
+    return {
+      editor: new Editor({
+        extensions: [
+          new BulletList(),
+        ],
+        content: `
+          <ul>
+            <li>A list item</li>
+            <li>And another one</li>
+          </ul>
+        `,
+      }),
+    }
+  },
+  beforeDestroy() {
+    this.editor.destroy()
+  }
+}
+</script>
+```
+
 ## Code
 Allows you to use the `<code>` HTML tag in the editor.
 
@@ -331,6 +388,64 @@ export default {
 </script>
 ```
 
+## Horizontal Rule
+Allows you to use the `<hr>` HTML tag in the editor.
+
+#### Options
+*None*
+
+#### Commands
+| command | options | description |
+| ------ | ---- | ---------------- |
+| horizontal_rule | none | Create a horizontal rule. |
+
+#### Default Keybindings
+*None*
+
+#### Example
+```vue
+<template>
+  <div>
+    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+      <button type="button" @click="commands.horizontal_rule">
+        Horizontal Rule
+      </button>
+    </editor-menu-bar>
+
+    <editor-content :editor="editor" />
+  </div>
+</template>
+
+<script>
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { HorizontalRule } from 'tiptap-extensions'
+
+export default {
+  components: {
+    EditorMenuBar,
+    EditorContent,
+  },
+  data() {
+    return {
+      editor: new Editor({
+        extensions: [
+          new HorizontalRule(),
+        ],
+        content: `
+          <p>Some text.</p>
+          <hr />
+          <p>Text again.</p>
+        `,
+      }),
+    }
+  },
+  beforeDestroy() {
+    this.editor.destroy()
+  }
+}
+</script>
+```
+
 ## Italic
 Allows you to use the `<em>` HTML tag in the editor.
 
@@ -347,7 +462,6 @@ Allows you to use the `<em>` HTML tag in the editor.
 - `Cmd-i` on macOS
 
 #### Example
-
 ```vue
 <template>
   <div>
@@ -407,6 +521,66 @@ Allows you to use the `<ol>` HTML tag in the editor.
 ::: warning Restrictions
 This extensions is intended to be used with the `ListItem` extension. 
 :::
+
+#### Options
+*None*
+
+#### Commands
+| command | options | description |
+| ------ | ---- | ---------------- |
+| ordered_list | none | Toggle an ordered list. |
+
+#### Default Keybindings
+- `Shift-Ctrl-9` Wrap in an ordered list
+
+#### Example
+
+```vue
+<template>
+  <div>
+    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+      <button type="button" :class="{ 'is-active': isActive.ordered_list() }" @click="commands.ordered_list">
+        Ordered List
+      </button>
+    </editor-menu-bar>
+
+    <editor-content :editor="editor" />
+  </div>
+</template>
+
+<script>
+import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
+import { OrderedList } from 'tiptap-extensions'
+
+export default {
+  components: {
+    EditorMenuBar,
+    EditorContent,
+  },
+  data() {
+    return {
+      editor: new Editor({
+        extensions: [
+          new OrderedList(),
+        ],
+        content: `
+          <ol>
+            <li>A list item</li>
+            <li>And another one</li>
+          </ol>
+          <ol start="3">
+            <li>This list begins with 3.</li>
+          </ol>
+        `,
+      }),
+    }
+  },
+  beforeDestroy() {
+    this.editor.destroy()
+  }
+}
+</script>
+```
 
 ## Table
 This enables support for tables in your editor.
