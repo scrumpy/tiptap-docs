@@ -549,7 +549,6 @@ This extensions is intended to be used with the `ListItem` extension.
 `Shift-Ctrl-9`
 
 #### Example
-
 ```vue
 <template>
   <div>
@@ -596,6 +595,9 @@ export default {
 }
 </script>
 ```
+
+## Placeholder
+Allows you to show placeholders on empty paragraphs.
 
 ## Table
 This enables support for tables in your editor.
