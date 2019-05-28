@@ -256,6 +256,12 @@ export default {
 ## CodeBlock
 Allows you to use the `<pre>` HTML tag in the editor.
 
+## CodeBlockHighlight
+Allows you to use the `<pre>` HTML tag with auto-detected syntax highlighting in the editor.
+
+## Collaboration
+Allows you to collaborate with others on one document.
+
 ## HardBreak
 Allows you to use the `<br>` HTML tag in the editor.
 
@@ -520,6 +526,9 @@ Allows you to use the `<li>` HTML tag in the editor.
 ::: warning Restrictions
 This extensions is intended to be used with the `BulletList` or `OrderedList` extension. 
 :::
+
+## Mention
+Allows you to use mentions in the editor.
 
 ## OrderedList
 Allows you to use the `<ol>` HTML tag in the editor.
