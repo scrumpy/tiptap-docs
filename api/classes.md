@@ -128,22 +128,18 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
 - **Default:** `false`
 
 #### extensions
-- **Details:** A list of extensions used by the editor. This list may contain `Nodes`, `Marks`,
-  or [`Plugins`](plugins.md). Check the [extensions guide][@extensions-guide] for more information.
+- **Details:** A list of extensions used by the editor. This list may contain `Nodes`, `Marks`, or `Plugins`. Check the [extensions guide][@extensions-guide] for more information.
 - **Type:** `Array<Node | Mark | Plugin>`
 - **Required:** `false`
 - **Default:** `[]`
 
 #### content
 
-- **Details:** the editor state object used by ProseMirror. You can also pass HTML to the `content` slot of the 
-  [`EditorContent`component](components.md#editor-content). This option has priority and when _both_ slot and option is 
-  used, the `content` slot will be ignored.
+- **Details:** the editor state object used by ProseMirror. You can also pass HTML to the `content` slot of the [`EditorContent`component](components.md#editor-content). This option has priority and when _both_ slot and option is used, the `content` slot will be ignored.
 - **Type**: `string |  object`
 - **Required:**: `false`
 - **Default:** `null`
-- **Restriction**: both the HTML string and JSON elements are bound to the [document schema][@doc-schema]. Any tag not 
-  defined in the schema is ignored.
+- **Restriction**: both the HTML string and JSON elements are bound to the [document schema][@doc-schema]. Any tag not defined in the schema is ignored.
 
 #### emptyDocument
 - **Details**: contains the initial ProseMirror document specification used to render  an empty document. You may override it with a custom schema.
@@ -160,8 +156,7 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
   ```
 
 #### useBuiltInExtensions
-- **Details:** By default tiptap adds a `Doc`, `Paragraph` and `Text` node to the ProseMirror schema. Set this to `false`
-  if you want to change the default structure of how your document is generated.
+- **Details:** By default tiptap adds a `Doc`, `Paragraph` and `Text` node to the ProseMirror schema. Set this to `false` if you want to change the default structure of how your document is generated.
 - **Type:** `boolean`
 - **Required:** `false`
 - **Default:** `true`
@@ -173,8 +168,7 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
 - **Default:** `{}`
 
 #### onInit()
-- **Details:** This will be called with an object containing [`state`][@ProseMirror-state] and [`view`][@ProseMirror-view] 
-  from ProseMirror once the editor is initialized.
+- **Details:** This will be called with an object containing [`state`][@ProseMirror-state] and [`view`][@ProseMirror-view] from ProseMirror once the editor is initialized.
 - **Type:** `Function`
 - **Required:** `false`
 - **Default:** `() => {}`
@@ -189,8 +183,7 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
   })
   ```
 #### onUpdate(context)
-- **Details:** This will be called with a context object containing the current [`state`][@ProseMirror-state] of ProseMirror,
-  a `getJSON()` and `getHTML()` functions, and the [`transaction`][@ProseMirror-transaction] on every change made to the editor.
+- **Details:** This will be called with a context object containing the current [`state`][@ProseMirror-state] of ProseMirror, a `getJSON()` and `getHTML()` functions, and the [`transaction`][@ProseMirror-transaction] on every change made to the editor.
 - **Type:** `Function`
 - **Required:** `false`
 - **Default:** `() => {}`
@@ -206,8 +199,7 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
   ```
 
 #### onFocus()
-- **Details:** This will be called and object containing the [focus `event`][@mdn-focus-event], the current 
-  [`state`][@ProseMirror-state], and [`view`][@ProseMirror-view] from ProseMirror whenever the editor _receives_ focus.
+- **Details:** This will be called and object containing the [focus `event`][@mdn-focus-event], the current [`state`][@ProseMirror-state], and [`view`][@ProseMirror-view] from ProseMirror whenever the editor _receives_ focus.
 - **Type:** `Function`
 - **Required:** `false`
 - **Default:** `() => {}`
@@ -222,8 +214,7 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
   ```
 
 #### onBlur()
-- **Details:** This will be called and object containing the [blur `event`][@mdn-blur-event], the current 
-  [`state`][@ProseMirror-state], and [`view`][@ProseMirror-view] from ProseMirror whenever the editor _loses_ focus.
+- **Details:** This will be called and object containing the [blur `event`][@mdn-blur-event], the current [`state`][@ProseMirror-state], and [`view`][@ProseMirror-view] from ProseMirror whenever the editor _loses_ focus.
 - **Type:** `Function`
 - **Required:** `false`
 - **Default:** `() => {}`
@@ -310,7 +301,7 @@ TBD
 
 [@tiptap-contrib]: https://github.com/scrumpy/tiptap/blob/master/CONTRIBUTING.md
 [@doc-schema]: https://ProseMirror.net/docs/ref/#model.Document_Schema
-[@extensions-guide]: ../extensions/basics.md
+[@extensions-guide]: ./extensions.md
 [@ProseMirror-dropcursor]: https://github.com/ProseMirror/ProseMirror-dropcursor
 [@ProseMirror-editor-props]: https://ProseMirror.net/docs/ref/#view.EditorProps
 [@ProseMirror-guide]: https://ProseMirror.net/docs/guide/
