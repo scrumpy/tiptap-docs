@@ -1,7 +1,7 @@
 > 🚧 This is a work in progress and contributions are welcome. Read the tiptap [contribution guidelines][@tiptap-contrib]
 > and help us shape the documentation.
 
-# Built-in extensions
+# Extensions
 By default, the editor will only support paragraphs. Other nodes and marks are available as **extensions**. You must 
 install `tiptap-extensions` package separately so that you can use basic Nodes, Marks, or Plugins. An extension is
 usually tied to a [Command](../commands/basics.md). The official set of commands are part of the 

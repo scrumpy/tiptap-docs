@@ -8,43 +8,42 @@ module.exports = {
         editLinkText: 'Edit this page on GitHub',
         search: true,
         sidebar: {
+            '/api/': [
+                {
+                    title: 'API Reference',
+                    collapsable: false,
+                    children: [
+                        '',
+                        'classes',
+                        'components',
+                        'extensions',
+                    ]
+                },
+            ],
             '/': [
                 {
                     title: 'Getting Started',
                     collapsable: false,
                     children: [
                         '',
-                        'getting-started/installation',
-                        'getting-started/usage',
+                        'guide/installation',
+                        'guide/usage',
+                        'guide/styling',
                     ]
                 },
                 {
-                    title: 'Styling',
+                    title: 'Core Concepts',
                     collapsable: false,
                     children: [
-                        'styling/basics',
+                        'guide/extensions',
+                        'guide/commands',
                     ]
                 },
-                {
-                    title: 'Extensions',
-                    collapsable: false,
-                    children: [
-                        'extensions/basics.md',
-                        'extensions/built-in.md'
-                    ]
-                },
-                {
-                    title: 'API',
-                    collapsable: false,
-                    children: [
-                        'api/classes',
-                        'api/components',
-                        'api/plugins'
-                    ]
-                }
             ],
         },
         nav: [
+            { text: 'Guide', link: '/' },
+            { text: 'API Reference', link: '/api/' },
             { text: 'GitHub', link: 'https://github.com/scrumpy/tiptap' },
             { text: 'Examples', link: 'https://tiptap.scrumpy.io/' },
         ],
