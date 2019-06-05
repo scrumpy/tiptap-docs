@@ -1,6 +1,3 @@
-> 🚧 This is a work in progress and contributions are welcome. Read the tiptap [contribution guidelines][@tiptap-contrib]
-> and help us shape the documentation.
-
 # Introduction
 
 tiptap is a _renderless_ and extendable rich-text editor for [Vue.js](https://github.com/vuejs/vue)
@@ -28,6 +25,13 @@ You can save your data as a raw `HTML` string or can get a `JSON`-serializable r
 ## Examples
 To check out some live examples, visit [tiptap.scrumpy.io][@tiptap-examples].
 
+### Who is using tiptap already?
+- Scrumpy
+- GitLab
+- Statamic
+- ApostropheCMS
+- Directus
+
 ## Contributing
 
 Please see the [`CONTRIBUTING`][@tiptap-contrib] file for details. If you want to contribute with 
@@ -38,7 +42,7 @@ yarn install
 yarn start
 ```
 
-## Credits
+### Credits
 
 - [Philipp Kühn](https://github.com/philippkuehn)
 - [Christoph Flathmann](https://github.com/Chrissi2812)

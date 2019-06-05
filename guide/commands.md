@@ -1,6 +1,3 @@
-> 🚧 This is a work in progress and contributions are welcome. Read the tiptap [contribution guidelines][@tiptap-contrib]
-> and help us shape the documentation.
-
 # Commands
 TBD
 

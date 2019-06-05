@@ -1,4 +1,4 @@
-# Styling
+# Renderless
 
 tiptap comes without any CSS. But there are still some things you should keep in mind.
 

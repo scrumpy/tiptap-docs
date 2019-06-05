@@ -28,15 +28,16 @@ module.exports = {
                         '',
                         'guide/installation',
                         'guide/usage',
-                        'guide/styling',
                     ]
                 },
                 {
                     title: 'Core Concepts',
                     collapsable: false,
                     children: [
+                        'guide/editor',
                         'guide/extensions',
                         'guide/commands',
+                        'guide/renderless',
                     ]
                 },
             ],
