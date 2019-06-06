@@ -86,6 +86,7 @@ An object passed down to the `Editor` constructor to change it's behaviour.
   useBuiltInExtensions: true,
   dropCursor: {},
   onInit: () => {},
+  onTransaction: () => {},
   onUpdate: () => {},
   onFocus: () => {},
   onBlur: () => {},
