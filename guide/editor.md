@@ -4,7 +4,6 @@ This class is a central building block of tiptap. It does most of the heavy lift
 
 Although tiptap tries to hide most of the complexity of [ProseMirror](https://ProseMirror.net/docs/), tiptap is built on top of its APIs and we strongly recommend you to read through the [ProseMirror Guide](https://ProseMirror.net/docs/guide/). You'll have a better understanding of how everything works under the hood and get familiar with many terms and jargon used by tiptap.
 
-## Usage
 You must create an instance of `Editor` class and pass it to the `EditorContent` component. The `Editor` constructor accepts an object of editor options.
 
 ```vue
@@ -31,34 +30,4 @@ export default {
   },
 }
 </script>
-```
-
-## Events
-There are some events you can listen for. A full list of events can be found [here](/api/classes.md#editor-options).
-
-```js
-const editor = new Editor({
-  onInit: () => {
-    // editor is initialized
-  },
-  onUpdate: ({ getHTML }) => {
-    // get new content on update
-    const newContent = this.getHTML()
-  },
-})
-```
-
-It's also possible to register event listeners afterwards.
-
-```js
-const editor = new Editor()
-
-editor.on('init', () => {
-  // editor is initialized
-})
-
-editor.on('update', ({ getHTML }) => {
-  // get new content on update
-  const newContent = this.getHTML()
-})
 ```

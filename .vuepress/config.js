@@ -36,6 +36,8 @@ module.exports = {
                         'guide/editor',
                         'guide/extensions',
                         'guide/commands',
+                        'guide/menus',
+                        'guide/events',
                         'guide/renderless',
                     ]
                 },
