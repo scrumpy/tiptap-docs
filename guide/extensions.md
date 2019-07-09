@@ -63,8 +63,8 @@ const editor = new Editor({
     new Bold(),
     new Italic(),
     new Link(),
-    new HardBreak()
-    new Heading(),
+    new HardBreak(),
+    new Heading()
   ],
 })
 ```
