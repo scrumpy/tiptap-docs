@@ -9,7 +9,7 @@ You must create an instance of `Editor` class and pass it to the `EditorContent`
 ```vue
 <template>
   <editor-content :editor="editor" />
-<template>
+</template>
 
 <script>
 import { Editor, EditorContent } from 'tiptap'
