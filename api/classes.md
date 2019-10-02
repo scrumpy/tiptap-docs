@@ -27,12 +27,13 @@
 - **Arguments** 
   - `{object} options` an object of [Editor options](#editor-options)
 
-#### setContent(content = {}, emitUpdate = false)
+#### setContent(content = {}, emitUpdate = false, options = {})
 Replace the current content. You can pass an HTML string or a JSON document that matches the editor's [`schema`][@ProseMirror-schema].
 
 - **Arguments:**
   - `{object} content` HTML string or a JSON document
   - `{boolean} emitUpdate` whether or not the change should trigger the [`onUpdate`](#onupdate-context) callback.
+  - `{object} options` an object of [Parser options][@ProseMirror-parser-options]
 
 
 #### clearContent(emitUpdate = false)
@@ -313,3 +314,4 @@ TBD
 [@ProseMirror]: https://ProseMirror.net/docs/
 [@mdn-focus-event]: https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event
 [@mdn-blur-event]: https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
+[@ProseMirror-parser-options]: https://prosemirror.net/docs/ref/#model.ParseOptions
