@@ -31,6 +31,7 @@ To check out some live examples, visit [tiptap.scrumpy.io][@tiptap-examples].
 - Statamic
 - ApostropheCMS
 - Directus
+- Nextcloud
 
 ## Contributing
 
