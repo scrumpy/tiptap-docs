@@ -85,6 +85,8 @@ An object passed down to the `Editor` constructor to change it's behaviour.
     }],
   },
   useBuiltInExtensions: true,
+  disableInputRules: false,
+  disablePasteRules: false,
   dropCursor: {},
   onInit: () => {},
   onTransaction: () => {},
@@ -162,6 +164,18 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
 - **Type:** `boolean`
 - **Required:** `false`
 - **Default:** `true`
+
+#### disableInputRules
+- **Details:** Disables markdown shortcuts when typing. Set to `true` to disable all input rules. Specific rules can be disabled by passing an array of extension names, e.g. `['bold']`.
+- **Type:** `boolean | Array<string>`
+- **Required:** `false`
+- **Default:** `false`
+
+#### disablePasteRules
+- **Details:** Disables markdown shortcuts when pasting content. Set to `true` to disable all rules. Specific rules can be disabled by passing an array of extension names, e.g. `['bold']`.
+- **Type:** `boolean | Array<string>`
+- **Required:** `false`
+- **Default:** `false`
 
 #### dropCursor
 - **Details:** Configuration options for [`ProseMirror-dropcursor`][@ProseMirror-dropcursor].
