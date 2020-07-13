@@ -1,9 +1,9 @@
 # Render a Menu Bar
 Tiptap comes with three types of menus.
 
-- `EditorMenuBar` → [example](https://tiptap.scrumpy.io/)
-- `EditorMenuBubble` → [example](https://tiptap.scrumpy.io/menu-bubble)
-- `EditorFloatingMenu` → [example](https://tiptap.scrumpy.io/floating-menu)
+- `EditorMenuBar` → [example](https://tiptap.dev/)
+- `EditorMenuBubble` → [example](https://tiptap.dev/menu-bubble)
+- `EditorFloatingMenu` → [example](https://tiptap.dev/floating-menu)
 
 To connect a menu to your editor you have to pass the `Editor` instance.
 
