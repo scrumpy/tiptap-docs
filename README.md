@@ -1,3 +1,5 @@
+This repository has been migrated to a new organization (Read more: https://github.com/scrumpy/tiptap/issues/759)
+
 # Introduction
 
 tiptap is a _renderless_ and extendable rich-text editor for [Vue.js](https://github.com/vuejs/vue)
