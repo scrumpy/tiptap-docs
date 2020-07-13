@@ -1,4 +1,4 @@
-This repository has been migrated to a new organization (Read more: https://github.com/scrumpy/tiptap/issues/759)
+> This repository has been migrated to a new organization (Read more: https://github.com/scrumpy/tiptap/issues/759)
 
 # Introduction
 
