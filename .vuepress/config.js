@@ -1,9 +1,9 @@
 module.exports = {
     lang: 'en-US',
-    title: 'scrumpy/tiptap',
+    title: 'ueberdosis/tiptap',
     base: '/docs/',
     themeConfig: {
-        docsRepo: 'scrumpy/tiptap-docs',
+        docsRepo: 'ueberdosis/tiptap-docs',
         editLinks: true,
         editLinkText: 'Edit this page on GitHub',
         search: true,
@@ -46,8 +46,8 @@ module.exports = {
         nav: [
             { text: 'Guide', link: '/' },
             { text: 'API Reference', link: '/api/' },
-            { text: 'GitHub', link: 'https://github.com/scrumpy/tiptap' },
-            { text: 'Examples', link: 'https://tiptap.scrumpy.io/' },
+            { text: 'GitHub', link: 'https://github.com/ueberdosis/tiptap' },
+            { text: 'Examples', link: 'https://tiptap.dev/' },
         ],
     },
 }

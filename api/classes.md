@@ -2,29 +2,29 @@
 
 [[toc]]
 
-## Editor 
+## Editor
 
 ### Instance properties
 
-#### commands 
+#### commands
 #### defaultOptions
 #### element
-#### extensions 
-#### inputRules 
-#### keymaps 
-#### marks 
-#### nodes 
-#### pasteRules 
-#### plugins 
-#### schema 
-#### state 
-#### view 
+#### extensions
+#### inputRules
+#### keymaps
+#### marks
+#### nodes
+#### pasteRules
+#### plugins
+#### schema
+#### state
+#### view
 
 ### Methods
 
 #### constructor([options])
 
-- **Arguments** 
+- **Arguments**
   - `{object} options` an object of [Editor options](#editor-options)
 
 #### setContent(content = {}, emitUpdate = false, options = {})
@@ -64,7 +64,7 @@ Focus the editor.
 Removes the focus from the editor.
 
 #### destroy()
-Destroy the editor and free all Prosemiror-related objects from memory. You should always call this method on 
+Destroy the editor and free all Prosemiror-related objects from memory. You should always call this method on
 `beforeDestroy()` lifecycle hook of the Vue component wrapping the editor.
 
 
@@ -85,6 +85,8 @@ An object passed down to the `Editor` constructor to change it's behaviour.
     }],
   },
   useBuiltInExtensions: true,
+  disableInputRules: false,
+  disablePasteRules: false,
   dropCursor: {},
   onInit: () => {},
   onTransaction: () => {},
@@ -162,6 +164,18 @@ The example above can be simplified by using the [`onPaste` option](#onpaste).
 - **Type:** `boolean`
 - **Required:** `false`
 - **Default:** `true`
+
+#### disableInputRules
+- **Details:** Disables markdown shortcuts when typing. Set to `true` to disable all input rules. Specific rules can be disabled by passing an array of extension names, e.g. `['bold']`.
+- **Type:** `boolean | Array<string>`
+- **Required:** `false`
+- **Default:** `false`
+
+#### disablePasteRules
+- **Details:** Disables markdown shortcuts when pasting content. Set to `true` to disable all rules. Specific rules can be disabled by passing an array of extension names, e.g. `['bold']`.
+- **Type:** `boolean | Array<string>`
+- **Required:** `false`
+- **Default:** `false`
 
 #### dropCursor
 - **Details:** Configuration options for [`ProseMirror-dropcursor`][@ProseMirror-dropcursor].
@@ -301,7 +315,7 @@ TBD
 ### Instance properties
 TBD
 
-[@tiptap-contrib]: https://github.com/scrumpy/tiptap/blob/master/CONTRIBUTING.md
+[@tiptap-contrib]: https://github.com/ueberdosis/tiptap/blob/master/CONTRIBUTING.md
 [@doc-schema]: https://ProseMirror.net/docs/ref/#model.Document_Schema
 [@extensions-guide]: ./extensions.md
 [@ProseMirror-dropcursor]: https://github.com/ProseMirror/ProseMirror-dropcursor

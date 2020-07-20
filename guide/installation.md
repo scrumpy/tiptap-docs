@@ -2,14 +2,14 @@
 
 Install the `tiptap` package with your favorite package manager:
 ```
-npm add tiptap
+npm install tiptap
 ```
 or
 ```
 yarn add tiptap
 ```
 
-Although optional, you might want to install [`tiptap-extensions`](../extensions/basics.md#installation) package
+Although optional, you might want to install [`tiptap-extensions`](../guide/extensions.html#installation) package
 so that you can use many of the ready-made components maintained by the tiptap team.
 
 > Older versions of NPM requires you to use `npm install` instead.
@@ -50,4 +50,4 @@ export default {
 ```
 
 [@editor-class]: ../api/classes.md#editor
-[@editor-content-component]: https://github.com/scrumpy/tiptap/blob/master/packages/tiptap/src/Components/EditorContent.js
+[@editor-content-component]: https://github.com/ueberdosis/tiptap/blob/master/packages/tiptap/src/Components/EditorContent.js
