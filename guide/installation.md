@@ -50,4 +50,4 @@ export default {
 ```
 
 [@editor-class]: ../api/classes.md#editor
-[@editor-content-component]: https://github.com/scrumpy/tiptap/blob/master/packages/tiptap/src/Components/EditorContent.js
+[@editor-content-component]: https://github.com/ueberdosis/tiptap/blob/master/packages/tiptap/src/Components/EditorContent.js

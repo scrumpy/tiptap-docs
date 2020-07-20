@@ -2,29 +2,29 @@
 
 [[toc]]
 
-## Editor 
+## Editor
 
 ### Instance properties
 
-#### commands 
+#### commands
 #### defaultOptions
 #### element
-#### extensions 
-#### inputRules 
-#### keymaps 
-#### marks 
-#### nodes 
-#### pasteRules 
-#### plugins 
-#### schema 
-#### state 
-#### view 
+#### extensions
+#### inputRules
+#### keymaps
+#### marks
+#### nodes
+#### pasteRules
+#### plugins
+#### schema
+#### state
+#### view
 
 ### Methods
 
 #### constructor([options])
 
-- **Arguments** 
+- **Arguments**
   - `{object} options` an object of [Editor options](#editor-options)
 
 #### setContent(content = {}, emitUpdate = false, options = {})
@@ -64,7 +64,7 @@ Focus the editor.
 Removes the focus from the editor.
 
 #### destroy()
-Destroy the editor and free all Prosemiror-related objects from memory. You should always call this method on 
+Destroy the editor and free all Prosemiror-related objects from memory. You should always call this method on
 `beforeDestroy()` lifecycle hook of the Vue component wrapping the editor.
 
 
@@ -301,7 +301,7 @@ TBD
 ### Instance properties
 TBD
 
-[@tiptap-contrib]: https://github.com/scrumpy/tiptap/blob/master/CONTRIBUTING.md
+[@tiptap-contrib]: https://github.com/ueberdosis/tiptap/blob/master/CONTRIBUTING.md
 [@doc-schema]: https://ProseMirror.net/docs/ref/#model.Document_Schema
 [@extensions-guide]: ./extensions.md
 [@ProseMirror-dropcursor]: https://github.com/ProseMirror/ProseMirror-dropcursor
