@@ -9,7 +9,7 @@ or
 yarn add tiptap
 ```
 
-Although optional, you might want to install [`tiptap-extensions`](../extensions/basics.md#installation) package
+Although optional, you might want to install [`tiptap-extensions`](../guide/extensions.html#installation) package
 so that you can use many of the ready-made components maintained by the tiptap team.
 
 > Older versions of NPM requires you to use `npm install` instead.
