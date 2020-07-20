@@ -3,7 +3,7 @@ By default there is only support for plain paragraphs. [`tiptap-extensions`](htt
 
 The extensions package provides ProseMirror plugins, Nodes, or Marks that can be added to tiptap. You are free to implement your own extensions as well. By using them, you barely have to think about defining your own ProseMirror [Document schema](https://prosemirror.net/docs/guide/#schema), as it is dynamically composed based on all extensions you have registered with your [`Editor`](../api/classes.md#editor) instance.
 
-For a full list of built-in extensions, check the [extensions list](./built-in.md) section in the documentation.
+For a full list of built-in extensions, check the [extensions list](../api/extensions.md) section in the documentation.
 
 ## Installation
 Install it with your favorite package manager:
