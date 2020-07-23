@@ -6,7 +6,7 @@ tiptap is a _renderless_ and extendable rich-text editor for [Vue.js](https://gi
 
 ## Why tiptap was built
 
-The guys behind [Scrumpy][@scrumpy] were looking for a text editor for [Vue.js][@vuejs] and
+The guys behind [überdosis][@ueberdosis] were looking for a text editor for [Vue.js][@vuejs] and
 found some solutions that didn't really satisfy their needs. The editor should be easy to extend and not based on old dependencies
 such as jQuery. For React there is already a great editor called [Slate.js][@slatejs],
 which impresses with its modularity. They came across [ProseMirror][@ProseMirror] and decided to build
@@ -58,7 +58,7 @@ The MIT License (MIT). Please see the [License File][@tiptap-license] for more i
 
 [@ProseMirror]: https://github.com/ProseMirror
 [@renderless]: https://adamwathan.me/renderless-components-in-vuejs/
-[@scrumpy]: https://scrumpy.io
+[@ueberdosis]: https://github.com/sponsors/überdosis
 [@slatejs]: https://github.com/ianstormtaylor/slate
 [@tiptap-contrib]: https://github.com/ueberdosis/tiptap/blob/master/CONTRIBUTING.md
 [@tiptap-docs]: https://github.com/ueberdosis/tiptap-docs
