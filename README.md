@@ -27,10 +27,11 @@ You can save your data as a raw `HTML` string or can get a `JSON`-serializable r
 ## Examples
 To check out some live examples, visit [tiptap.dev][@tiptap-examples].
 
-### Who is using tiptap already?
+### Who is using tiptap?
 - Scrumpy
 - GitLab
 - Statamic
+- Craft CMS
 - ApostropheCMS
 - Directus
 - Nextcloud
