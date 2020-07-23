@@ -9,7 +9,7 @@ For a full list of built-in extensions, check the [extensions list](../api/exten
 Install it with your favorite package manager:
 
 ```
-npm add tiptap-extensions
+npm install tiptap-extensions
 ```
 
 or
