@@ -4,6 +4,7 @@ module.exports = {
     base: '/docs/',
     themeConfig: {
         docsRepo: 'ueberdosis/tiptap-docs',
+        docsBranch: 'main',
         editLinks: true,
         editLinkText: 'Edit this page on GitHub',
         search: true,
