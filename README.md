@@ -61,9 +61,9 @@ The MIT License (MIT). Please see the [License File][@tiptap-license] for more i
 [@renderless]: https://adamwathan.me/renderless-components-in-vuejs/
 [@ueberdosis]: https://github.com/sponsors/überdosis
 [@slatejs]: https://github.com/ianstormtaylor/slate
-[@tiptap-contrib]: https://github.com/ueberdosis/tiptap/blob/master/CONTRIBUTING.md
+[@tiptap-contrib]: https://github.com/ueberdosis/tiptap/blob/main/CONTRIBUTING.md
 [@tiptap-docs]: https://github.com/ueberdosis/tiptap-docs
 [@tiptap-examples]: https://tiptap.dev/
-[@tiptap-license]: https://github.com/ueberdosis/tiptap/blob/master/LICENSE.md
+[@tiptap-license]: https://github.com/ueberdosis/tiptap/blob/main/LICENSE.md
 [@vuejs]: https://vuejs.org/
 [@vuepress]: https://vuepress.vuejs.org/

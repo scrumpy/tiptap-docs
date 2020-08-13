@@ -315,7 +315,7 @@ TBD
 ### Instance properties
 TBD
 
-[@tiptap-contrib]: https://github.com/ueberdosis/tiptap/blob/master/CONTRIBUTING.md
+[@tiptap-contrib]: https://github.com/ueberdosis/tiptap/blob/main/CONTRIBUTING.md
 [@doc-schema]: https://ProseMirror.net/docs/ref/#model.Document_Schema
 [@extensions-guide]: ./extensions.md
 [@ProseMirror-dropcursor]: https://github.com/ProseMirror/ProseMirror-dropcursor
