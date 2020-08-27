@@ -6211,11 +6211,6 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
-vuepress-plugin-simple-analytics@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-simple-analytics/-/vuepress-plugin-simple-analytics-1.0.3.tgz#9d1ec39ab9c476e2880eb3e032197a705f7d6ae9"
-  integrity sha512-m/NoS+vap2kH1IfRxfDl4EY3ATEAjg8VkBKlqaT0OYjRXpbXcWmUHhwsT2ayu/bBBCx+Rd7805XaffiEZkb3bg==
-
 vuepress@^0.14.11:
   version "0.14.11"
   resolved "https://registry.yarnpkg.com/vuepress/-/vuepress-0.14.11.tgz#fc6ba0e609e3433a8070e95301b4d987712b2a08"
