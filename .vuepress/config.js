@@ -51,4 +51,10 @@ module.exports = {
             { text: 'Examples', link: 'https://tiptap.dev/' },
         ],
     },
+    plugins: [
+        'vuepress-plugin-simple-analytics',
+        {
+          customDomain: 'data.tiptap.dev',
+        },
+    ],
 }
