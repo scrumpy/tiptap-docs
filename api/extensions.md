@@ -1,7 +1,7 @@
 # Extensions
-By default, the editor will only support paragraphs. Other nodes and marks are available as **extensions**. You must 
+By default, the editor will only support paragraphs. Other nodes and marks are available as **extensions**. You must
 install `tiptap-extensions` package separately so that you can use basic Nodes, Marks, or Plugins. An extension is
-usually tied to a [Command](../commands/basics.md). The official set of commands are part of the 
+usually tied to a [Command](../guide/commands.md). The official set of commands are part of the
 [`tiptap-commands`][@npmjs-tiptap-commands] package.
 
 ## Blockquote
@@ -79,8 +79,8 @@ The extension will generate the corresponding `<strong>` HTML tags when reading 
 | bold | none | Mark text as bold. |
 
 #### Keybindings
-`Ctrl-b` (on Windows/Linux)  
-`Cmd-b` (on macOS)  
+`Ctrl-b` (on Windows/Linux)
+`Cmd-b` (on macOS)
 
 #### Example
 
@@ -134,7 +134,7 @@ export default {
 Allows you to use the `<ul>` HTML tag in the editor.
 
 ::: warning Restrictions
-This extensions is intended to be used with the `ListItem` extension. 
+This extensions is intended to be used with the `ListItem` extension.
 :::
 
 #### Options
@@ -282,12 +282,12 @@ Allows you to use the headline HTML tags in the editor.
 | heading | level | Creates a heading node. |
 
 #### Keybindings
-`Shift-Ctrl-1` → H1  
-`Shift-Ctrl-2` → H2  
-`Shift-Ctrl-3` → H3  
-`Shift-Ctrl-4` → H4  
-`Shift-Ctrl-5` → H5  
-`Shift-Ctrl-6` → H6  
+`Shift-Ctrl-1` → H1
+`Shift-Ctrl-2` → H2
+`Shift-Ctrl-3` → H3
+`Shift-Ctrl-4` → H4
+`Shift-Ctrl-5` → H5
+`Shift-Ctrl-6` → H6
 
 #### Example
 ```vue
@@ -350,8 +350,8 @@ Enables history support.
 | redo | none | Redo the latest change. |
 
 #### Keybindings
-`Mod-z` → Undo  
-`Shift-Mod-z` → Redo  
+`Mod-z` → Undo
+`Shift-Mod-z` → Redo
 
 #### Example
 ```vue
@@ -467,8 +467,8 @@ Allows you to use the `<em>` HTML tag in the editor.
 | italic | none | Mark text as italic. |
 
 #### Keybindings
-`Ctrl-i` (on Windows/Linux)  
-`Cmd-i` (on macOS)  
+`Ctrl-i` (on Windows/Linux)
+`Cmd-i` (on macOS)
 
 #### Example
 ```vue
@@ -520,12 +520,12 @@ Allows you to use the `<a>` HTML tag in the editor.
 | option | type | default | description |
 | ------ | ---- | ---- | ----- |
 | openOnClick | Boolean | true | Specifies if links will be opened on click. |
-  
+
 ## ListItem
 Allows you to use the `<li>` HTML tag in the editor.
 
 ::: warning Restrictions
-This extensions is intended to be used with the `BulletList` or `OrderedList` extension. 
+This extensions is intended to be used with the `BulletList` or `OrderedList` extension.
 :::
 
 ## Mention
@@ -535,7 +535,7 @@ Allows you to use mentions in the editor.
 Allows you to use the `<ol>` HTML tag in the editor.
 
 ::: warning Restrictions
-This extensions is intended to be used with the `ListItem` extension. 
+This extensions is intended to be used with the `ListItem` extension.
 :::
 
 #### Options
@@ -611,8 +611,8 @@ Each `<TableCell>` includes a single `<Paragraph>`.
 | resizable | Boolean | false | Enables the resizing of columns |
 
 #### Keybindings
-`Tab` → Next Cell  
-`Shift-Tab` → Previous Cell  
+`Tab` → Next Cell
+`Shift-Tab` → Previous Cell
 
 #### Commands
 | command | options | description |
@@ -650,7 +650,7 @@ You have to include all table extensions (`TableHeader`, `TableCell` & `TableRow
       <editor-content :editor="editor" />
     </div>
   </template>
-  
+
   <script>
   import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
   import { Table, TableCell, TableHeader, TableRow } from 'tiptap-extensions'
@@ -706,7 +706,7 @@ This extensions is intended to be used with the `Table` extension.
 It renders a single toggleable item of a list.
 
 ::: warning Restrictions
-This extensions is intended to be used with the `TodoList` extension. 
+This extensions is intended to be used with the `TodoList` extension.
 :::
 
 #### Options
@@ -724,7 +724,7 @@ This extensions is intended to be used with the `TodoList` extension.
 Renders a toggleable list of items.
 
 ::: warning Restrictions
-This extensions is intended to be used with the `TodoItem` extension. 
+This extensions is intended to be used with the `TodoItem` extension.
 :::
 
 #### Options
@@ -802,8 +802,8 @@ Allows you to use the `<s>` HTML tag in the editor.
 | strike | none | Mark text as strikethrough. |
 
 #### Keybindings
-`Ctrl-d` (on Windows/Linux)  
-`Cmd-d` (on macOS)  
+`Ctrl-d` (on Windows/Linux)
+`Cmd-d` (on macOS)
 
 #### Example
 
@@ -863,8 +863,8 @@ Allows you to use the `<u>` HTML tag in the editor.
 | underline | none | Mark text as underlined. |
 
 #### Keybindings
-`Ctrl-u` (on Windows/Linux)  
-`Cmd-u` (on macOS)  
+`Ctrl-u` (on Windows/Linux)
+`Cmd-u` (on macOS)
 
 #### Example
 
