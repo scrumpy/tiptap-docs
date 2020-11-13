@@ -165,7 +165,7 @@ This extensions is intended to be used with the `ListItem` extension.
 
 <script>
 import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
-import { BulletList } from 'tiptap-extensions'
+import { ListItem, BulletList } from 'tiptap-extensions'
 
 export default {
   components: {
@@ -177,6 +177,7 @@ export default {
       editor: new Editor({
         extensions: [
           new BulletList(),
+          new ListItem()
         ],
         content: `
           <ul>
@@ -565,7 +566,7 @@ This extensions is intended to be used with the `ListItem` extension.
 
 <script>
 import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
-import { OrderedList } from 'tiptap-extensions'
+import { ListItem, OrderedList } from 'tiptap-extensions'
 
 export default {
   components: {
@@ -576,6 +577,7 @@ export default {
     return {
       editor: new Editor({
         extensions: [
+          new ListItem(),
           new OrderedList(),
         ],
         content: `
